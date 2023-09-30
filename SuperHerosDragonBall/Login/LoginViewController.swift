@@ -31,7 +31,8 @@ class LoginViewController: UIViewController {
                                     print("Heroes: \(heroes)")
                                     DispatchQueue.main.async {
                                         let tableView = TableViewController()
-                                        self?.navigationController?.setViewControllers([tableView], animated: true)
+                                        //self?.navigationController?.setViewControllers([tableView], animated: true)//Sin boton de back, ideal para login
+                                        self?.navigationController?.show(tableView, sender: nil)//Con boton de back
                                     }
                                     if let hero = heroes.last {
                                         self?.model.getTransformations(
