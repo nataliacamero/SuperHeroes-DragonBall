@@ -18,7 +18,7 @@
 		E15D19B02AC631E900F5675C /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19AF2AC631E900F5675C /* Hero.swift */; };
 		E15D19B22AC729FA00F5675C /* Transformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19B12AC729FA00F5675C /* Transformation.swift */; };
 		E15D19B42AC7361E00F5675C /* GetTransformationBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19B32AC7361E00F5675C /* GetTransformationBody.swift */; };
-		E15D19B62AC860EE00F5675C /* 	.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19B52AC860EE00F5675C /* 	.swift */; };
+		E15D19B62AC860EE00F5675C /* LocalDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19B52AC860EE00F5675C /* LocalDataModel.swift */; };
 		E15D19BA2AC875F100F5675C /* AllHeroesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19B82AC875F100F5675C /* AllHeroesViewController.swift */; };
 		E15D19BB2AC875F100F5675C /* AllHeroesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E15D19B92AC875F100F5675C /* AllHeroesViewController.xib */; };
 /* End PBXBuildFile section */
@@ -37,7 +37,7 @@
 		E15D19AF2AC631E900F5675C /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		E15D19B12AC729FA00F5675C /* Transformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformation.swift; sourceTree = "<group>"; };
 		E15D19B32AC7361E00F5675C /* GetTransformationBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTransformationBody.swift; sourceTree = "<group>"; };
-		E15D19B52AC860EE00F5675C /* 	.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "\t.swift"; sourceTree = "<group>"; };
+		E15D19B52AC860EE00F5675C /* LocalDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataModel.swift; sourceTree = "<group>"; };
 		E15D19B82AC875F100F5675C /* AllHeroesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllHeroesViewController.swift; sourceTree = "<group>"; };
 		E15D19B92AC875F100F5675C /* AllHeroesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllHeroesViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,7 +101,7 @@
 				E15D19AF2AC631E900F5675C /* Hero.swift */,
 				E15D19B12AC729FA00F5675C /* Transformation.swift */,
 				E15D19B32AC7361E00F5675C /* GetTransformationBody.swift */,
-				E15D19B52AC860EE00F5675C /* 	.swift */,
+				E15D19B52AC860EE00F5675C /* LocalDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -193,7 +193,7 @@
 				E15D19B42AC7361E00F5675C /* GetTransformationBody.swift in Sources */,
 				E15D19BA2AC875F100F5675C /* AllHeroesViewController.swift in Sources */,
 				E15D19972AC5FD3B00F5675C /* ViewController.swift in Sources */,
-				E15D19B62AC860EE00F5675C /* 	.swift in Sources */,
+				E15D19B62AC860EE00F5675C /* LocalDataModel.swift in Sources */,
 				E15D19932AC5FD3B00F5675C /* AppDelegate.swift in Sources */,
 				E15D19952AC5FD3B00F5675C /* SceneDelegate.swift in Sources */,
 				E15D19B02AC631E900F5675C /* Hero.swift in Sources */,
