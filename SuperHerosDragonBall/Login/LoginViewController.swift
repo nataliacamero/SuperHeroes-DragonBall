@@ -8,9 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
     @IBOutlet weak var usernameTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
     
     private let model = NetworkModel()//Inicializndo el modelo
@@ -18,8 +16,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    
     
     @IBAction func continueTapped(_ sender: Any) {
         model.login(
@@ -31,23 +27,27 @@ class LoginViewController: UIViewController {
                     print("Token: \(token).")
                     self?.model.getHeroes { result in
                             switch result {
-                            case let .success(heroes):
-                                print("Heroes: \(heroes)")
-                                if let hero = heroes.last {
-                                    self?.model.getTransformations(
-                                        for: hero
-                                    ) { result in
-                                        switch result {
-                                        case let .success(transformations):
-                                            print("Transformation: \(transformations)")
-                                        case let .failure(error):
-                                            print("Error: \(error) como te va")
+                                case let .success(heroes):
+                                    print("Heroes: \(heroes)")
+                                    DispatchQueue.main.async {
+                                        let tableView = TableViewController()
+                                        self?.navigationController?.setViewControllers([tableView], animated: true)
+                                    }
+                                    if let hero = heroes.last {
+                                        self?.model.getTransformations(
+                                            for: hero
+                                        ) { result in
+                                            switch result {
+                                            case let .success(transformations):
+                                                print("Transformation: \(transformations)")
+                                            case let .failure(error):
+                                                print("Error: \(error) como te va")
+                                            }
                                         }
                                     }
-                                }
-                            case let .failure(error):
-                                print("Error: \(error): Hola")
-                                }
+                                case let .failure(error):
+                                    print("Error: \(error): Hola")
+                                    }
                             }
                 
               
