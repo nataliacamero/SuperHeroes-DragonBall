@@ -20,8 +20,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return
         }
         let window = UIWindow(windowScene: scene)
-        let viewController = LoginViewController() // Para que sea presentado.
-        window.rootViewController = viewController // Para presentarlo en nuestro window
+        let loginViewController = LoginViewController() // Para que sea presentado.
+        let navigationController = UINavigationController(rootViewController: loginViewController)
+        window.rootViewController = navigationController // Para presentarlo en nuestro window
         window.makeKeyAndVisible() // Para que se haga visible
         self.window = window // Para hacer una referencia
         
