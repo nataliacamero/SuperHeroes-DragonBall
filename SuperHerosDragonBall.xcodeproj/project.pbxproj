@@ -10,9 +10,17 @@
 		E15D19932AC5FD3B00F5675C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19922AC5FD3B00F5675C /* AppDelegate.swift */; };
 		E15D19952AC5FD3B00F5675C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19942AC5FD3B00F5675C /* SceneDelegate.swift */; };
 		E15D19972AC5FD3B00F5675C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19962AC5FD3B00F5675C /* ViewController.swift */; };
-		E15D199A2AC5FD3B00F5675C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E15D19982AC5FD3B00F5675C /* Main.storyboard */; };
 		E15D199C2AC5FD3B00F5675C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E15D199B2AC5FD3B00F5675C /* Assets.xcassets */; };
 		E15D199F2AC5FD3B00F5675C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E15D199D2AC5FD3B00F5675C /* LaunchScreen.storyboard */; };
+		E15D19A82AC602AD00F5675C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19A62AC602AD00F5675C /* LoginViewController.swift */; };
+		E15D19A92AC602AD00F5675C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E15D19A72AC602AD00F5675C /* LoginViewController.xib */; };
+		E15D19AE2AC6179700F5675C /* NetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19AD2AC6179700F5675C /* NetworkModel.swift */; };
+		E15D19B02AC631E900F5675C /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19AF2AC631E900F5675C /* Hero.swift */; };
+		E15D19B22AC729FA00F5675C /* Transformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19B12AC729FA00F5675C /* Transformation.swift */; };
+		E15D19B42AC7361E00F5675C /* GetTransformationBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19B32AC7361E00F5675C /* GetTransformationBody.swift */; };
+		E15D19B62AC860EE00F5675C /* 	.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19B52AC860EE00F5675C /* 	.swift */; };
+		E15D19BA2AC875F100F5675C /* AllHeroesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19B82AC875F100F5675C /* AllHeroesViewController.swift */; };
+		E15D19BB2AC875F100F5675C /* AllHeroesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E15D19B92AC875F100F5675C /* AllHeroesViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +28,18 @@
 		E15D19922AC5FD3B00F5675C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E15D19942AC5FD3B00F5675C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E15D19962AC5FD3B00F5675C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E15D19992AC5FD3B00F5675C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E15D199B2AC5FD3B00F5675C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E15D199E2AC5FD3B00F5675C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E15D19A02AC5FD3B00F5675C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E15D19A62AC602AD00F5675C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E15D19A72AC602AD00F5675C /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		E15D19AD2AC6179700F5675C /* NetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkModel.swift; sourceTree = "<group>"; };
+		E15D19AF2AC631E900F5675C /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		E15D19B12AC729FA00F5675C /* Transformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transformation.swift; sourceTree = "<group>"; };
+		E15D19B32AC7361E00F5675C /* GetTransformationBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTransformationBody.swift; sourceTree = "<group>"; };
+		E15D19B52AC860EE00F5675C /* 	.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "\t.swift"; sourceTree = "<group>"; };
+		E15D19B82AC875F100F5675C /* AllHeroesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllHeroesViewController.swift; sourceTree = "<group>"; };
+		E15D19B92AC875F100F5675C /* AllHeroesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllHeroesViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +72,47 @@
 		E15D19912AC5FD3B00F5675C /* SuperHerosDragonBall */ = {
 			isa = PBXGroup;
 			children = (
+				E15D19B72AC8756A00F5675C /* AllHeroes */,
+				E15D19AC2AC6166300F5675C /* Models */,
+				E15D19AA2AC6032800F5675C /* Login */,
 				E15D19922AC5FD3B00F5675C /* AppDelegate.swift */,
 				E15D19942AC5FD3B00F5675C /* SceneDelegate.swift */,
 				E15D19962AC5FD3B00F5675C /* ViewController.swift */,
-				E15D19982AC5FD3B00F5675C /* Main.storyboard */,
 				E15D199B2AC5FD3B00F5675C /* Assets.xcassets */,
 				E15D199D2AC5FD3B00F5675C /* LaunchScreen.storyboard */,
 				E15D19A02AC5FD3B00F5675C /* Info.plist */,
 			);
 			path = SuperHerosDragonBall;
+			sourceTree = "<group>";
+		};
+		E15D19AA2AC6032800F5675C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E15D19A62AC602AD00F5675C /* LoginViewController.swift */,
+				E15D19A72AC602AD00F5675C /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E15D19AC2AC6166300F5675C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E15D19AD2AC6179700F5675C /* NetworkModel.swift */,
+				E15D19AF2AC631E900F5675C /* Hero.swift */,
+				E15D19B12AC729FA00F5675C /* Transformation.swift */,
+				E15D19B32AC7361E00F5675C /* GetTransformationBody.swift */,
+				E15D19B52AC860EE00F5675C /* 	.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E15D19B72AC8756A00F5675C /* AllHeroes */ = {
+			isa = PBXGroup;
+			children = (
+				E15D19B82AC875F100F5675C /* AllHeroesViewController.swift */,
+				E15D19B92AC875F100F5675C /* AllHeroesViewController.xib */,
+			);
+			path = AllHeroes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +175,8 @@
 			files = (
 				E15D199F2AC5FD3B00F5675C /* LaunchScreen.storyboard in Resources */,
 				E15D199C2AC5FD3B00F5675C /* Assets.xcassets in Resources */,
-				E15D199A2AC5FD3B00F5675C /* Main.storyboard in Resources */,
+				E15D19BB2AC875F100F5675C /* AllHeroesViewController.xib in Resources */,
+				E15D19A92AC602AD00F5675C /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +187,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E15D19B22AC729FA00F5675C /* Transformation.swift in Sources */,
+				E15D19AE2AC6179700F5675C /* NetworkModel.swift in Sources */,
+				E15D19A82AC602AD00F5675C /* LoginViewController.swift in Sources */,
+				E15D19B42AC7361E00F5675C /* GetTransformationBody.swift in Sources */,
+				E15D19BA2AC875F100F5675C /* AllHeroesViewController.swift in Sources */,
 				E15D19972AC5FD3B00F5675C /* ViewController.swift in Sources */,
+				E15D19B62AC860EE00F5675C /* 	.swift in Sources */,
 				E15D19932AC5FD3B00F5675C /* AppDelegate.swift in Sources */,
 				E15D19952AC5FD3B00F5675C /* SceneDelegate.swift in Sources */,
+				E15D19B02AC631E900F5675C /* Hero.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E15D19982AC5FD3B00F5675C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E15D19992AC5FD3B00F5675C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E15D199D2AC5FD3B00F5675C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +340,6 @@
 				INFOPLIST_FILE = SuperHerosDragonBall/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +367,6 @@
 				INFOPLIST_FILE = SuperHerosDragonBall/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
