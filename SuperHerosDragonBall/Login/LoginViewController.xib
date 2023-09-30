@@ -20,6 +20,9 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fondo4" translatesAutoresizingMaskIntoConstraints="NO" id="r52-ao-RZu">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                </imageView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="bPi-pd-MtU">
                     <rect key="frame" x="12" y="334" width="369" height="184"/>
                     <subviews>
@@ -64,7 +67,13 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="bPi-pd-MtU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="B8m-vz-QjS"/>
+                <constraint firstItem="r52-ao-RZu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="L0b-RC-1f7"/>
+                <constraint firstItem="r52-ao-RZu" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Mxb-RI-Iln"/>
+                <constraint firstItem="r52-ao-RZu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="PYa-uO-aBA"/>
+                <constraint firstItem="r52-ao-RZu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="XRq-ku-W3J"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="r52-ao-RZu" secondAttribute="trailing" id="cH4-YJ-zE7"/>
                 <constraint firstItem="bPi-pd-MtU" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="eXc-eg-hNH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="r52-ao-RZu" secondAttribute="bottom" id="lU6-mp-CYc"/>
                 <constraint firstItem="bPi-pd-MtU" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="nhu-XG-n2a"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bPi-pd-MtU" secondAttribute="trailing" constant="12" id="rR8-Oi-1EE"/>
             </constraints>
@@ -72,6 +81,7 @@
         </view>
     </objects>
     <resources>
+        <image name="fondo4" width="1116" height="1941"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
