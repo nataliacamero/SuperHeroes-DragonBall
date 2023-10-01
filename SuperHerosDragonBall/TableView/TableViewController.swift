@@ -26,14 +26,18 @@ class TableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "List of Heroes"
+        title = "Heroes"
         tableView.dataSource = self
         tableView.delegate = self
         print("Heroes en TableView: \(heroesArray)")
+//        tableView.register(
+//            UINib(nibName: "TableViewCell", bundle: nil),
+//            forCellReuseIdentifier: TableViewCell.identifier
+//        ) //Registar nuesta celda
         tableView.register(
-            UINib(nibName: "TableViewCell", bundle: nil),
-            forCellReuseIdentifier: TableViewCell.identifier
-        ) //Registar nuesta celda
+            UINib(nibName: "HeroesTableViewCell", bundle: nil),
+            forCellReuseIdentifier: HeroesTableViewCell.identifier
+        )
 
     }
     
@@ -45,7 +49,7 @@ extension TableViewController: UITableViewDataSource {
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
     ) -> Int {
-        return countries.count
+        return heroesArray.count
     }
     
     func tableView(
@@ -56,14 +60,24 @@ extension TableViewController: UITableViewDataSource {
 //        let country = countries[indexPath.row]
 //        cell.textLabel?.text = country
 //        return cell
+//        guard let cell = tableView.dequeueReusableCell(
+//            withIdentifier: TableViewCell.identifier,
+//            for: indexPath
+//        ) as? TableViewCell else {
+//            return UITableViewCell()
+//        }
+//        let country = countries[indexPath.row]
+//        cell.configure(with: country)
+//        return cell
+        
         guard let cell = tableView.dequeueReusableCell(
-            withIdentifier: TableViewCell.identifier,
+            withIdentifier: HeroesTableViewCell.identifier,
             for: indexPath
-        ) as? TableViewCell else {
+        ) as? HeroesTableViewCell else {
             return UITableViewCell()
         }
-        let country = countries[indexPath.row]
-        cell.configure(with: country)
+        let hero = heroesArray[indexPath.row]
+        cell.configure(with: hero)
         return cell
     }
 }
