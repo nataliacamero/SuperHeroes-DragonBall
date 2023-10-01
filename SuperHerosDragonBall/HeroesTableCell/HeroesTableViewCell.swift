@@ -22,6 +22,7 @@ class HeroesTableViewCell: UITableViewCell {
     
     //MARK: - Metodo para configurar traer la data a la celda.
     func configure(with heroe:  Hero ) {
+        imageHero.setImage(for: heroe.photo)
         nameHero.text = heroe.name
         descriptionHero.text = heroe.description
     }

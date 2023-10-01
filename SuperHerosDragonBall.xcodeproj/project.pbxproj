@@ -27,6 +27,7 @@
 		E15D19DF2AC9A09300F5675C /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E15D19DD2AC9A09300F5675C /* TableViewCell.xib */; };
 		E15D19EC2AC9EA8300F5675C /* HeroesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19EA2AC9EA8300F5675C /* HeroesTableViewCell.swift */; };
 		E15D19ED2AC9EA8300F5675C /* HeroesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E15D19EB2AC9EA8300F5675C /* HeroesTableViewCell.xib */; };
+		E15D19F12ACA0A0700F5675C /* UIImage+remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19F02ACA0A0700F5675C /* UIImage+remote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		E15D19DD2AC9A09300F5675C /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		E15D19EA2AC9EA8300F5675C /* HeroesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesTableViewCell.swift; sourceTree = "<group>"; };
 		E15D19EB2AC9EA8300F5675C /* HeroesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroesTableViewCell.xib; sourceTree = "<group>"; };
+		E15D19F02ACA0A0700F5675C /* UIImage+remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+remote.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		E15D19912AC5FD3B00F5675C /* SuperHerosDragonBall */ = {
 			isa = PBXGroup;
 			children = (
+				E15D19EF2ACA098B00F5675C /* UIImage+remote */,
 				E15D19EE2AC9F6C500F5675C /* HeroesTableCell */,
 				E15D19E02AC9AF5200F5675C /* Tablecell */,
 				E15D19DB2AC984E300F5675C /* DetailView */,
@@ -155,6 +158,14 @@
 				E15D19EB2AC9EA8300F5675C /* HeroesTableViewCell.xib */,
 			);
 			path = HeroesTableCell;
+			sourceTree = "<group>";
+		};
+		E15D19EF2ACA098B00F5675C /* UIImage+remote */ = {
+			isa = PBXGroup;
+			children = (
+				E15D19F02ACA0A0700F5675C /* UIImage+remote.swift */,
+			);
+			path = "UIImage+remote";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +256,7 @@
 				E15D19DE2AC9A09300F5675C /* TableViewCell.swift in Sources */,
 				E15D19B02AC631E900F5675C /* Hero.swift in Sources */,
 				E15D19D92AC9780600F5675C /* DataViewController.swift in Sources */,
+				E15D19F12ACA0A0700F5675C /* UIImage+remote.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
