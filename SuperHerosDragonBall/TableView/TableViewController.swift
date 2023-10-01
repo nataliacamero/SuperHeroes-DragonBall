@@ -10,14 +10,29 @@ import UIKit
 class TableViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
+    private var heroesArray: [Hero] = []
+    
     private let countries: [String] = ["España", "Colombia", "Venezuela"]
-            
+    
+    init(heroesArray: [Hero]) {
+        self.heroesArray = heroesArray
+        super.init(nibName: nil, bundle: nil)
+    }
+   
+    
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "List of Heroes"
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "CellIdentifier")
+        print("Heroes en TableView: \(heroesArray)")
+        
     }
     
 }

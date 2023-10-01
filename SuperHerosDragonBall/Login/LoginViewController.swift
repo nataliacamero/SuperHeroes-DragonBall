@@ -30,7 +30,7 @@ class LoginViewController: UIViewController {
                                 case let .success(heroes):
                                     print("Heroes: \(heroes)")
                                     DispatchQueue.main.async {
-                                        let tableView = TableViewController()
+                                        let tableView = TableViewController(heroesArray: heroes)
                                         self?.navigationController?.setViewControllers([tableView], animated: true)//Sin boton de back, ideal para login
                                         //self?.navigationController?.show(tableView, sender: nil)//Con boton de back
                                     }
