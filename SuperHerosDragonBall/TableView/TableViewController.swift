@@ -10,7 +10,7 @@ import UIKit
 class TableViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
-    private let contruies: [String] = ["España", "Colombia", "Venezuela"]
+    private let countries: [String] = ["España", "Colombia", "Venezuela"]
             
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ extension TableViewController: UITableViewDataSource {
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
     ) -> Int {
-        return contruies.count
+        return countries.count
     }
     
     func tableView(
@@ -36,14 +36,24 @@ extension TableViewController: UITableViewDataSource {
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellIdentifier", for: indexPath)
-        let country = contruies[indexPath.row]
+        let country = countries[indexPath.row]
         cell.textLabel?.text = country
         return cell
     }
 }
 
 // MARK: - Table View Delegate
-extension TableViewController: UITableViewDelegate {}
+extension TableViewController: UITableViewDelegate {
+    func tableView(
+        _ tableView: UITableView,
+        didSelectRowAt indexPath: IndexPath
+    ) {
+        let country = countries[indexPath.row]
+        let datailViewController = DataViewController(country: country)
+        navigationController?.show(datailViewController, sender: nil)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
 
 
 

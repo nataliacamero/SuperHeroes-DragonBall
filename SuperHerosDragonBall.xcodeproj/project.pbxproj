@@ -21,6 +21,8 @@
 		E15D19BF2AC89FEC00F5675C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E15D19BE2AC89FEB00F5675C /* Assets.xcassets */; };
 		E15D19D42AC8D33C00F5675C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19D22AC8D33C00F5675C /* TableViewController.swift */; };
 		E15D19D52AC8D33C00F5675C /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E15D19D32AC8D33C00F5675C /* TableViewController.xib */; };
+		E15D19D92AC9780600F5675C /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19D72AC9780600F5675C /* DataViewController.swift */; };
+		E15D19DA2AC9780600F5675C /* DataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E15D19D82AC9780600F5675C /* DataViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		E15D19BE2AC89FEB00F5675C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = SuperHerosDragonBall/Login/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		E15D19D22AC8D33C00F5675C /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		E15D19D32AC8D33C00F5675C /* TableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
+		E15D19D72AC9780600F5675C /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		E15D19D82AC9780600F5675C /* DataViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,8 @@
 				E15D19962AC5FD3B00F5675C /* ViewController.swift */,
 				E15D199D2AC5FD3B00F5675C /* LaunchScreen.storyboard */,
 				E15D19A02AC5FD3B00F5675C /* Info.plist */,
+				E15D19D72AC9780600F5675C /* DataViewController.swift */,
+				E15D19D82AC9780600F5675C /* DataViewController.xib */,
 			);
 			path = SuperHerosDragonBall;
 			sourceTree = "<group>";
@@ -174,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E15D199F2AC5FD3B00F5675C /* LaunchScreen.storyboard in Resources */,
+				E15D19DA2AC9780600F5675C /* DataViewController.xib in Resources */,
 				E15D19BF2AC89FEC00F5675C /* Assets.xcassets in Resources */,
 				E15D19A92AC602AD00F5675C /* LoginViewController.xib in Resources */,
 				E15D19D52AC8D33C00F5675C /* TableViewController.xib in Resources */,
@@ -197,6 +204,7 @@
 				E15D19932AC5FD3B00F5675C /* AppDelegate.swift in Sources */,
 				E15D19952AC5FD3B00F5675C /* SceneDelegate.swift in Sources */,
 				E15D19B02AC631E900F5675C /* Hero.swift in Sources */,
+				E15D19D92AC9780600F5675C /* DataViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
