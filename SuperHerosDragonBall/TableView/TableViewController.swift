@@ -18,7 +18,6 @@ class TableViewController: UIViewController {
         self.heroesArray = heroesArray
         super.init(nibName: nil, bundle: nil)
     }
-   
     
     @available(*, unavailable)
     required init?(coder: NSCoder) {
@@ -30,14 +29,17 @@ class TableViewController: UIViewController {
         title = "List of Heroes"
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "CellIdentifier")
         print("Heroes en TableView: \(heroesArray)")
-        
+        tableView.register(
+            UINib(nibName: "TableViewCell", bundle: nil),
+            forCellReuseIdentifier: TableViewCell.identifier
+        ) //Registar nuesta celda
+
     }
     
 }
             
-// MARK: - Tale View DataSource
+// MARK: - Table View DataSource
 extension TableViewController: UITableViewDataSource {
     func tableView(
         _ tableView: UITableView,
@@ -50,9 +52,18 @@ extension TableViewController: UITableViewDataSource {
         _ tableView: UITableView,
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CellIdentifier", for: indexPath)
+//        let cell = tableView.dequeueReusableCell(withIdentifier:      "CellIdentifier", for: indexPath)
+//        let country = countries[indexPath.row]
+//        cell.textLabel?.text = country
+//        return cell
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: TableViewCell.identifier,
+            for: indexPath
+        ) as? TableViewCell else {
+            return UITableViewCell()
+        }
         let country = countries[indexPath.row]
-        cell.textLabel?.text = country
+        cell.configure(with: country)
         return cell
     }
 }
