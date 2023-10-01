@@ -80,6 +80,7 @@
 		E15D19912AC5FD3B00F5675C /* SuperHerosDragonBall */ = {
 			isa = PBXGroup;
 			children = (
+				E15D19E02AC9AF5200F5675C /* Tablecell */,
 				E15D19DB2AC984E300F5675C /* DetailView */,
 				E15D19D62AC8D4F200F5675C /* TableView */,
 				E15D19BE2AC89FEB00F5675C /* Assets.xcassets */,
@@ -90,8 +91,6 @@
 				E15D19962AC5FD3B00F5675C /* ViewController.swift */,
 				E15D199D2AC5FD3B00F5675C /* LaunchScreen.storyboard */,
 				E15D19A02AC5FD3B00F5675C /* Info.plist */,
-				E15D19DC2AC9A09300F5675C /* TableViewCell.swift */,
-				E15D19DD2AC9A09300F5675C /* TableViewCell.xib */,
 			);
 			path = SuperHerosDragonBall;
 			sourceTree = "<group>";
@@ -133,6 +132,15 @@
 				E15D19D82AC9780600F5675C /* DataViewController.xib */,
 			);
 			path = DetailView;
+			sourceTree = "<group>";
+		};
+		E15D19E02AC9AF5200F5675C /* Tablecell */ = {
+			isa = PBXGroup;
+			children = (
+				E15D19DC2AC9A09300F5675C /* TableViewCell.swift */,
+				E15D19DD2AC9A09300F5675C /* TableViewCell.xib */,
+			);
+			path = Tablecell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
