@@ -88,8 +88,8 @@ extension TableViewController: UITableViewDelegate {
         _ tableView: UITableView,
         didSelectRowAt indexPath: IndexPath
     ) {
-        let country = countries[indexPath.row]
-        let datailViewController = DataViewController(country: country)
+        let heroesDetail = heroesArray[indexPath.row]
+        let datailViewController = DataViewController(hero: heroesDetail)
         navigationController?.show(datailViewController, sender: nil)
         tableView.deselectRow(at: indexPath, animated: true)
     }

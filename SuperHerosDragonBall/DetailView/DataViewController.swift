@@ -10,11 +10,11 @@ import UIKit
 class DataViewController: UIViewController {
     @IBOutlet weak var countryLabelText: UILabel!
     
+    private var hero: Hero
+    //private let country: String
     
-    private let country: String
-    
-    init(country: String) {
-        self.country = country
+    init(hero: Hero) {
+        self.hero = hero
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -25,8 +25,8 @@ class DataViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = country
-        countryLabelText.text = country
+        title = hero.name
+        countryLabelText.text = hero.name
     }
 
     
