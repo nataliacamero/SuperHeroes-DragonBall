@@ -14,6 +14,7 @@ class HeroesTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionHero: UILabel!
     
     
+    //MARK: - Añadir chevrone derecha
     override func awakeFromNib() {
            super.awakeFromNib()
            self.accessoryType = .disclosureIndicator
@@ -24,6 +25,4 @@ class HeroesTableViewCell: UITableViewCell {
         nameHero.text = heroe.name
         descriptionHero.text = heroe.description
     }
-  
-    
 }
