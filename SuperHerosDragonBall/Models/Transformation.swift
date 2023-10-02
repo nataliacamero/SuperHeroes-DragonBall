@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Transformation: Decodable {
+struct Transformation: Decodable, CommonInfo {
     let id: String
     let name: String
     let photo: URL

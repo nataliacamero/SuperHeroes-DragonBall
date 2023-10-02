@@ -1,21 +1,24 @@
 //
-//  TableViewController.swift
+//  TransformationsListViewController.swift
 //  SuperHerosDragonBall
 //
-//  Created by Natalia Camero on 1/10/23.
+//  Created by Natalia Camero on 2/10/23.
 //
 
 import UIKit
 
-class TableViewController: UIViewController {
+class TransformationsListViewController: UIViewController {
+    @IBOutlet weak var transformationsLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    private var heroesArray: [Hero] = []
+    private let model = NetworkModel()//Inicializndo el modelo
     
-    private let countries: [String] = ["España", "Colombia", "Venezuela"]
+    private var hero: Hero
     
-    init(heroesArray: [Hero]) {
-        self.heroesArray = heroesArray
+    private var transformations: [Transformation] = []
+    
+    init(hero: Hero) {
+        self.hero = hero
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -26,30 +29,37 @@ class TableViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Heroes"
+        title = "Transformaciones"
         tableView.dataSource = self
         tableView.delegate = self
-        print("Heroes en TableView: \(heroesArray)")
-//        tableView.register(
-//            UINib(nibName: "TableViewCell", bundle: nil),
-//            forCellReuseIdentifier: TableViewCell.identifier
-//        ) //Registar nuesta celda
+        transformationsLabel.text = hero.name
         tableView.register(
             UINib(nibName: "HeroesTableViewCell", bundle: nil),
             forCellReuseIdentifier: HeroesTableViewCell.identifier
         )
 
-    }
-    
+        model.getTransformations(
+                for: hero
+            ) { result in
+                switch result {
+                    case let .success(transformations):
+                        print("Transformation: \(transformations)")
+                        self.transformations = transformations
+                    case let .failure(error):
+                        print("Error: \(error) como te va")
+              }
+            }
+        }
 }
-            
+    
+
 // MARK: - Table View DataSource
-extension TableViewController: UITableViewDataSource {
+extension TransformationsListViewController: UITableViewDataSource {
     func tableView(
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
     ) -> Int {
-        return heroesArray.count
+        return transformations.count
     }
     
     func tableView(
@@ -76,28 +86,22 @@ extension TableViewController: UITableViewDataSource {
         ) as? HeroesTableViewCell else {
             return UITableViewCell()
         }
-        let hero = heroesArray[indexPath.row ] 
-        cell.configure(with: hero as CommonInfo )
+        let transformation = transformations[indexPath.row]
+        cell.configure(with: transformation as CommonInfo)
         return cell
     }
 }
 
 // MARK: - Table View Delegate
-extension TableViewController: UITableViewDelegate {
-    func tableView(
-        _ tableView: UITableView,
-        didSelectRowAt indexPath: IndexPath
-    ) {
-        let heroesDetail = heroesArray[indexPath.row]
-        let datailViewController = DataViewController(hero: heroesDetail)
-        navigationController?.show(datailViewController, sender: nil)
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
+extension TransformationsListViewController: UITableViewDelegate {
+//    func tableView(
+//        _ tableView: UITableView,
+//        didSelectRowAt indexPath: IndexPath
+//    ) {
+//        let transformationDetail = transformations[indexPath.row]
+//        let transformationsListViewController = TransformationsListViewController(hero: transformationDetail as! CommonInfo)
+//        navigationController?.show(transformationsListViewController, sender: nil)
+//        tableView.deselectRow(at: indexPath, animated: true)
+//    }
 }
-
-
-
-
-   
-
 

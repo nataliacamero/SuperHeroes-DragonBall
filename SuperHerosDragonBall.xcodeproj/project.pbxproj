@@ -28,8 +28,8 @@
 		E15D19EC2AC9EA8300F5675C /* HeroesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19EA2AC9EA8300F5675C /* HeroesTableViewCell.swift */; };
 		E15D19ED2AC9EA8300F5675C /* HeroesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E15D19EB2AC9EA8300F5675C /* HeroesTableViewCell.xib */; };
 		E15D19F12ACA0A0700F5675C /* UIImage+remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19F02ACA0A0700F5675C /* UIImage+remote.swift */; };
-		E15D19F52ACA0C3900F5675C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19F32ACA0C3900F5675C /* DetailViewController.swift */; };
-		E15D19F62ACA0C3900F5675C /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E15D19F42ACA0C3900F5675C /* DetailViewController.xib */; };
+		E15D19FA2ACA25E300F5675C /* TransformationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19F82ACA25E300F5675C /* TransformationsListViewController.swift */; };
+		E15D19FB2ACA25E300F5675C /* TransformationsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E15D19F92ACA25E300F5675C /* TransformationsListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,8 +56,8 @@
 		E15D19EA2AC9EA8300F5675C /* HeroesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesTableViewCell.swift; sourceTree = "<group>"; };
 		E15D19EB2AC9EA8300F5675C /* HeroesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroesTableViewCell.xib; sourceTree = "<group>"; };
 		E15D19F02ACA0A0700F5675C /* UIImage+remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+remote.swift"; sourceTree = "<group>"; };
-		E15D19F32ACA0C3900F5675C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		E15D19F42ACA0C3900F5675C /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		E15D19F82ACA25E300F5675C /* TransformationsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationsListViewController.swift; sourceTree = "<group>"; };
+		E15D19F92ACA25E300F5675C /* TransformationsListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransformationsListViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +90,7 @@
 		E15D19912AC5FD3B00F5675C /* SuperHerosDragonBall */ = {
 			isa = PBXGroup;
 			children = (
-				E15D19F22ACA0BC600F5675C /* DetailHeroe */,
+				E15D19F72ACA256F00F5675C /* TransformationsTableView */,
 				E15D19EF2ACA098B00F5675C /* UIImage+remote */,
 				E15D19EE2AC9F6C500F5675C /* HeroesTableCell */,
 				E15D19E02AC9AF5200F5675C /* Tablecell */,
@@ -173,13 +173,13 @@
 			path = "UIImage+remote";
 			sourceTree = "<group>";
 		};
-		E15D19F22ACA0BC600F5675C /* DetailHeroe */ = {
+		E15D19F72ACA256F00F5675C /* TransformationsTableView */ = {
 			isa = PBXGroup;
 			children = (
-				E15D19F32ACA0C3900F5675C /* DetailViewController.swift */,
-				E15D19F42ACA0C3900F5675C /* DetailViewController.xib */,
+				E15D19F82ACA25E300F5675C /* TransformationsListViewController.swift */,
+				E15D19F92ACA25E300F5675C /* TransformationsListViewController.xib */,
 			);
-			path = DetailHeroe;
+			path = TransformationsTableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,7 +243,7 @@
 				E15D199F2AC5FD3B00F5675C /* LaunchScreen.storyboard in Resources */,
 				E15D19ED2AC9EA8300F5675C /* HeroesTableViewCell.xib in Resources */,
 				E15D19DF2AC9A09300F5675C /* TableViewCell.xib in Resources */,
-				E15D19F62ACA0C3900F5675C /* DetailViewController.xib in Resources */,
+				E15D19FB2ACA25E300F5675C /* TransformationsListViewController.xib in Resources */,
 				E15D19DA2AC9780600F5675C /* DataViewController.xib in Resources */,
 				E15D19BF2AC89FEC00F5675C /* Assets.xcassets in Resources */,
 				E15D19A92AC602AD00F5675C /* LoginViewController.xib in Resources */,
@@ -259,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E15D19B22AC729FA00F5675C /* Transformation.swift in Sources */,
+				E15D19FA2ACA25E300F5675C /* TransformationsListViewController.swift in Sources */,
 				E15D19AE2AC6179700F5675C /* NetworkModel.swift in Sources */,
 				E15D19A82AC602AD00F5675C /* LoginViewController.swift in Sources */,
 				E15D19D42AC8D33C00F5675C /* TableViewController.swift in Sources */,
@@ -270,7 +271,6 @@
 				E15D19952AC5FD3B00F5675C /* SceneDelegate.swift in Sources */,
 				E15D19DE2AC9A09300F5675C /* TableViewCell.swift in Sources */,
 				E15D19B02AC631E900F5675C /* Hero.swift in Sources */,
-				E15D19F52ACA0C3900F5675C /* DetailViewController.swift in Sources */,
 				E15D19D92AC9780600F5675C /* DataViewController.swift in Sources */,
 				E15D19F12ACA0A0700F5675C /* UIImage+remote.swift in Sources */,
 			);

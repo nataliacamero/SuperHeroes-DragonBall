@@ -9,9 +9,12 @@ import UIKit
 
 class DataViewController: UIViewController {
     @IBOutlet weak var countryLabelText: UILabel!
-    
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+   
+    private let model = NetworkModel()//Inicializndo el modelo
     private var hero: Hero
-    //private let country: String
+   
     
     init(hero: Hero) {
         self.hero = hero
@@ -26,8 +29,15 @@ class DataViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = hero.name
+        imageView.setImage(for: hero.photo)
         countryLabelText.text = hero.name
+        descriptionLabel.text = hero.description
     }
 
+    @IBAction func transformationsButtonTapped(_ sender: Any) {
+        
+        let transformationsListViewController = TransformationsListViewController(hero: hero)
+        navigationController?.show(transformationsListViewController, sender: nil)
+    }
     
 }
