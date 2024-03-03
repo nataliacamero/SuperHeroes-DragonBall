@@ -36,7 +36,7 @@ class DataViewController: UIViewController {
 
     @IBAction func transformationsButtonTapped(_ sender: Any) {
         
-        let transformationsListViewController = TransformationsListViewController(hero: hero)
+        let transformationsListViewController = TransformationsListViewController()
         navigationController?.show(transformationsListViewController, sender: nil)
     }
     

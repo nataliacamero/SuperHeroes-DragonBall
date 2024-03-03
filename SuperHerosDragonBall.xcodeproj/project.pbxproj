@@ -90,19 +90,19 @@
 		E15D19912AC5FD3B00F5675C /* SuperHerosDragonBall */ = {
 			isa = PBXGroup;
 			children = (
-				E15D19F72ACA256F00F5675C /* TransformationsTableView */,
 				E15D19EF2ACA098B00F5675C /* UIImage+remote */,
+				E15D19F72ACA256F00F5675C /* TransformationsTableView */,
 				E15D19EE2AC9F6C500F5675C /* HeroesTableCell */,
 				E15D19E02AC9AF5200F5675C /* Tablecell */,
 				E15D19DB2AC984E300F5675C /* DetailView */,
 				E15D19D62AC8D4F200F5675C /* TableView */,
-				E15D19BE2AC89FEB00F5675C /* Assets.xcassets */,
-				E15D19AC2AC6166300F5675C /* Models */,
 				E15D19AA2AC6032800F5675C /* Login */,
+				E15D19AC2AC6166300F5675C /* Models */,
 				E15D19922AC5FD3B00F5675C /* AppDelegate.swift */,
 				E15D19942AC5FD3B00F5675C /* SceneDelegate.swift */,
 				E15D19962AC5FD3B00F5675C /* ViewController.swift */,
 				E15D199D2AC5FD3B00F5675C /* LaunchScreen.storyboard */,
+				E15D19BE2AC89FEB00F5675C /* Assets.xcassets */,
 				E15D19A02AC5FD3B00F5675C /* Info.plist */,
 			);
 			path = SuperHerosDragonBall;
