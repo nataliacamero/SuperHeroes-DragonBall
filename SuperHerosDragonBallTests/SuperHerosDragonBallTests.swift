@@ -1,71 +1,71 @@
-////
-////  SuperHerosDragonBallTests.swift
-////  SuperHerosDragonBallTests
-////
-////  Created by Natalia Camero on 3/3/24.
-////
 //
-//import XCTest
-//@testable import SuperHerosDragonBall
+//  SuperHerosDragonBallTests.swift
+//  SuperHerosDragonBallTests
 //
-//final class NetworkModelTests: XCTestCase {
-//    private var sut: NetworkModel!
-//    private var client: APIClientProtocol!
-//    private var expectedToken = "some JWT token"
-//    
-//    override func setUp() {
-//        super.setUp()
-//        let configuration = URLSessionConfiguration.ephemeral
-//        configuration.protocolClasses = [MockURLProtocol.self]
-//        let session = URLSession(configuration: configuration)
-//        LocalDataModel.save(token: expectedToken)
-//        client = APIClient(session: session)
-//        sut = NetworkModel(client: client)
-//    }
-//    
-//    override func tearDown() {
-//        super.tearDown()
-//        LocalDataModel.deleteToken()
-//        client = nil
-//        sut = nil
-//    }
-//    
-//    func testLogin() throws {
-//        let data = try XCTUnwrap(expectedToken.data(using: .utf8))
-//        let (user, password) = ("nataliacameroc@gmail.com", "Nc123456")
-//        MockURLProtocol.error = nil
-//        MockURLProtocol.requestHandler = { request in
-//            let loginString = String(format: "%@:%@", user, password)
-//            let loginData = loginString.data(using: String.Encoding.utf8)!
-//            let base64LoginString = loginData.base64EncodedString()
-//            XCTAssertEqual(request.httpMethod, "POST")
-//            XCTAssertEqual(request.value(forHTTPHeaderField: "Authorization"), "Basic \(base64LoginString)")
-//            let response = try XCTUnwrap(
-//                HTTPURLResponse(
-//                    url: .init(string: "https://dragonball.keepcoding.education/")!,
-//                    statusCode: 200,
-//                    httpVersion: nil,
-//                    headerFields: ["Content-Type": "application/json"]
-//                )
-//            )
-//            return (response, data)
-//        }
-//        let expectation = expectation(description: "Login success")
-//        var receivedToken: String?
-//        sut.login(user: user, password: password) { result in
-//            guard case let .success(token) = result else {
-//                XCTFail("Expected success but received \(result)")
-//                return
-//            }
-//            expectation.fulfill()
-//            receivedToken = token
-//        }
-//        
-//        wait(for: [expectation], timeout: 1)
-//        XCTAssertNotNil(receivedToken, "should have received a token")
-//        XCTAssertNotEqual(receivedToken, expectedToken)
-//    }
-//    
+//  Created by Natalia Camero on 3/3/24.
+//
+
+import XCTest
+@testable import SuperHerosDragonBall
+
+final class NetworkModelTests: XCTestCase {
+    private var sut: NetworkModel!
+    private var client: APIClientProtocol!
+    private var expectedToken = "some JWT token"
+    
+    override func setUp() {
+        super.setUp()
+        let configuration = URLSessionConfiguration.ephemeral
+        configuration.protocolClasses = [MockURLProtocol.self]
+        let session = URLSession(configuration: configuration)
+        LocalDataModel.save(token: expectedToken)
+        client = APIClient(session: session)
+        sut = NetworkModel(client: client)
+    }
+    
+    override func tearDown() {
+        super.tearDown()
+        LocalDataModel.deleteToken()
+        client = nil
+        sut = nil
+    }
+    
+    func testLogin() throws {
+        let data = try XCTUnwrap(expectedToken.data(using: .utf8))
+        let (user, password) = ("nataliacameroc@gmail.com", "Nc123456")
+        MockURLProtocol.error = nil
+        MockURLProtocol.requestHandler = { request in
+            let loginString = String(format: "%@:%@", user, password)
+            let loginData = loginString.data(using: String.Encoding.utf8)!
+            let base64LoginString = loginData.base64EncodedString()
+            XCTAssertEqual(request.httpMethod, "POST")
+            XCTAssertEqual(request.value(forHTTPHeaderField: "Authorization"), "Basic \(base64LoginString)")
+            let response = try XCTUnwrap(
+                HTTPURLResponse(
+                    url: .init(string: "https://dragonball.keepcoding.education/")!,
+                    statusCode: 200,
+                    httpVersion: nil,
+                    headerFields: ["Content-Type": "application/json"]
+                )
+            )
+            return (response, data)
+        }
+        let expectation = expectation(description: "Login success")
+        var receivedToken: String?
+        sut.login(user: user, password: password) { result in
+            guard case let .success(token) = result else {
+                XCTFail("Expected success but received \(result)")
+                return
+            }
+            expectation.fulfill()
+            receivedToken = token
+        }
+        
+        wait(for: [expectation], timeout: 1)
+        XCTAssertNotNil(receivedToken, "should have received a token")
+        XCTAssertNotEqual(receivedToken, expectedToken)
+    }
+    
 //    func testLoginError() throws {
 //        MockURLProtocol.error = .malformedUrl
 //        
@@ -115,44 +115,44 @@
 //        XCTAssertFalse(receivedHeroes.isEmpty)
 //        XCTAssertEqual(receivedHeroes.first?.name, "Maestro Roshi")
 //    }
-//    
-//}
-//
-//final class MockURLProtocol: URLProtocol {
-//    static var error: NetworkError?
-//    static var requestHandler: ((URLRequest) throws -> (HTTPURLResponse, Data))?
-//    
-//    override class func canInit(with request: URLRequest) -> Bool {
-//        return true
-//    }
-//    
-//    override class func canonicalRequest(for request: URLRequest) -> URLRequest {
-//        return request
-//    }
-//    
-//    override func startLoading() {
-//        if let error = MockURLProtocol.error {
-//            client?.urlProtocol(self, didFailWithError: error)
-//            return
-//        }
-//        
-//        guard let handler = MockURLProtocol.requestHandler else {
-//            assertionFailure("Received unexpected request with no handler set")
-//            return
-//        }
-//        
-//        do {
-//            let (response, data) = try handler(request)
-//            client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .notAllowed)
-//            client?.urlProtocol(self, didLoad: data)
-//            client?.urlProtocolDidFinishLoading(self)
-//        } catch {
-//            client?.urlProtocol(self, didFailWithError: error)
-//        }
-//    }
-//    
-//    override func stopLoading() {
-//        
-//    }
-//}
-//
+    
+}
+
+final class MockURLProtocol: URLProtocol {
+    static var error: NetworkError?
+    static var requestHandler: ((URLRequest) throws -> (HTTPURLResponse, Data))?
+    
+    override class func canInit(with request: URLRequest) -> Bool {
+        return true
+    }
+    
+    override class func canonicalRequest(for request: URLRequest) -> URLRequest {
+        return request
+    }
+    
+    override func startLoading() {
+        if let error = MockURLProtocol.error {
+            client?.urlProtocol(self, didFailWithError: error)
+            return
+        }
+        
+        guard let handler = MockURLProtocol.requestHandler else {
+            assertionFailure("Received unexpected request with no handler set")
+            return
+        }
+        
+        do {
+            let (response, data) = try handler(request)
+            client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .notAllowed)
+            client?.urlProtocol(self, didLoad: data)
+            client?.urlProtocolDidFinishLoading(self)
+        } catch {
+            client?.urlProtocol(self, didFailWithError: error)
+        }
+    }
+    
+    override func stopLoading() {
+        
+    }
+}
+
