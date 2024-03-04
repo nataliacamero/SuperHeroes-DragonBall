@@ -15,7 +15,7 @@ class TansformationsTableViewCell: UITableViewCell {
     
     //MARK: - Metodo para configurar traer la data a la celda.
     func configure(with transformation: TableViewCellRepresentable) {
-//        transformationImage.setImage(for: transformation.photo)
+        transformationImage.setImage(for: transformation.photo)
         tansformationLabel.text = transformation.name
         descriptionText.text = transformation.description
     }

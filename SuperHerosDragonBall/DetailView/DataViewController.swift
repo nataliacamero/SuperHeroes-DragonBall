@@ -12,8 +12,11 @@ class DataViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
    
-    private let model = NetworkModel()//Inicializndo el modelo
+    //private let model = NetworkModel()//Inicializndo el modelo
     private var hero: Hero
+    
+    private var transformation: Transformation?
+    private var transformations: [Transformation] = []
    
     
     init(hero: Hero) {
@@ -32,11 +35,22 @@ class DataViewController: UIViewController {
         imageView.setImage(for: hero.photo)
         countryLabelText.text = hero.name
         descriptionLabel.text = hero.description
+        
+        let networkModel = NetworkModel()
+        networkModel.getTransformations(for: hero) { [weak self] result in
+            guard case let .success(transformations) = result else {
+                return
+            }
+            self?.transformations = transformations.sorted {
+                print("transformationsDataView::::---> \(transformations)")
+                return $0.name.localizedStandardCompare($1.name) == .orderedAscending
+            }
+        }
     }
 
     @IBAction func transformationsButtonTapped(_ sender: Any) {
         
-        let transformationsListViewController = TransformationsListViewController()
+        let transformationsListViewController = TransformationsListViewController(transformations: transformations)
         navigationController?.show(transformationsListViewController, sender: nil)
     }
     

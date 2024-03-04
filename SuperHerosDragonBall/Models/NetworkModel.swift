@@ -129,6 +129,9 @@ final class NetworkModel {
         for hero: Hero,
         completion: @escaping (Result<[Transformation], NetworkError>) -> Void
     ) {
+        print("Entre transformations::::::::::::::::::::::")
+        print("HERo::: \(hero.id)")
+        print("Entre transformations::::::::::::::::::::::")
         var components = baseComponents
         components.path = "/api/heros/tranformations"
         
@@ -141,15 +144,6 @@ final class NetworkModel {
             completion(.failure(.noToken))
             return
         }
-        
-//        let body = GetTransformationBody(id: hero.id)
-//
-//        guard let encodedBody = try? JSONEncoder().encode(body) else {
-//            completion(.failure(.encodedFailed))
-//            return
-//        }
-//
-//        let bodyString = String(data: encodedBody, encoding: .utf8)
         
         var urlComponents = URLComponents()
         urlComponents.queryItems = [URLQueryItem(name: "id", value: hero.id)]
@@ -170,7 +164,8 @@ final class NetworkModel {
         completion: @escaping (Result<T, NetworkError>) -> Void
     ) {
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            let result: Result<T, NetworkError>
+        
+            var result: Result<T, NetworkError>
             
             defer {
                 completion(result)
@@ -182,11 +177,13 @@ final class NetworkModel {
             }
             
             guard let data else {
+                print("No se recibió data")
                 result = .failure(.noData)
                 return
             }
             
             guard let resource = try? JSONDecoder().decode(type, from: data) else {
+                print("Error al decodificar los datos")
                 result = .failure(.decodingFailed)
                 return
             }

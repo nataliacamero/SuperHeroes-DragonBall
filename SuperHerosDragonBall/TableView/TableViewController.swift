@@ -12,8 +12,6 @@ class TableViewController: UIViewController {
     
     private var heroesArray: [Hero] = []
     
-    private let countries: [String] = ["España", "Colombia", "Venezuela"]
-    
     init(heroesArray: [Hero]) {
         self.heroesArray = heroesArray
         super.init(nibName: nil, bundle: nil)
@@ -30,9 +28,6 @@ class TableViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         print("Heroes en TableView: \(heroesArray)")
-//        tableView.register(
-//            UINib(nibName: "TableViewCell", bundle: nil),
-//            forCellReuseIdentifier: TableViewCell.identifier
 //        ) //Registar nuesta celda
         tableView.register(
             UINib(nibName: "HeroesTableViewCell", bundle: nil),
@@ -56,20 +51,6 @@ extension TableViewController: UITableViewDataSource {
         _ tableView: UITableView,
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier:      "CellIdentifier", for: indexPath)
-//        let country = countries[indexPath.row]
-//        cell.textLabel?.text = country
-//        return cell
-//        guard let cell = tableView.dequeueReusableCell(
-//            withIdentifier: TableViewCell.identifier,
-//            for: indexPath
-//        ) as? TableViewCell else {
-//            return UITableViewCell()
-//        }
-//        let country = countries[indexPath.row]
-//        cell.configure(with: country)
-//        return cell
-        
         guard let cell = tableView.dequeueReusableCell(
             withIdentifier: HeroesTableViewCell.identifier,
             for: indexPath
