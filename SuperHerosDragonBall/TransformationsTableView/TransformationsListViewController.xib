@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TransformationsListViewController" customModule="SuperHerosDragonBall" customModuleProvider="target">
             <connections>
+                <outlet property="noDataLabel" destination="s9m-DS-EAm" id="A2O-UU-3bp"/>
                 <outlet property="taleView" destination="di1-Qt-Ri4" id="4Sl-Ku-XNa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -24,6 +25,12 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9m-DS-EAm" userLabel="noDataText">
+                    <rect key="frame" x="172.33333333333334" y="416.66666666666669" width="48.333333333333343" height="18.666666666666686"/>
+                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
+                    <color key="textColor" systemColor="systemOrangeColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -32,6 +39,8 @@
                 <constraint firstItem="di1-Qt-Ri4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="B7k-Rs-tKG"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="di1-Qt-Ri4" secondAttribute="bottom" id="DBh-Dl-wwA"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="di1-Qt-Ri4" secondAttribute="trailing" id="ZlH-xb-o4R"/>
+                <constraint firstItem="s9m-DS-EAm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="idV-mz-Ojz"/>
+                <constraint firstItem="s9m-DS-EAm" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="uPM-Cv-v4v"/>
             </constraints>
             <point key="canvasLocation" x="52" y="-11"/>
         </view>
@@ -39,6 +48,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

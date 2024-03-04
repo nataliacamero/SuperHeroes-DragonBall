@@ -42,7 +42,6 @@ class DataViewController: UIViewController {
                 return
             }
             self?.transformations = transformations.sorted {
-                print("transformationsDataView::::---> \(transformations)")
                 return $0.name.localizedStandardCompare($1.name) == .orderedAscending
             }
         }

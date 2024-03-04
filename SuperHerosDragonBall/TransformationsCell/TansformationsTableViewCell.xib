@@ -87,9 +87,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="itZ-Is-WCR"/>
             <connections>
-                <outlet property="descriptionText" destination="Tmi-2l-LkJ" id="BF8-Ix-3Fq"/>
-                <outlet property="tansformationLabel" destination="z7v-c9-weY" id="J1l-iK-nbe"/>
-                <outlet property="transformationImage" destination="cut-eA-4be" id="4eE-Yy-bU5"/>
+                <outlet property="descriptionText" destination="Tmi-2l-LkJ" id="Yw8-C5-I7K"/>
+                <outlet property="tansformationLabel" destination="z7v-c9-weY" id="0ga-ee-8FQ"/>
+                <outlet property="transformationImage" destination="cut-eA-4be" id="uEq-rk-GfL"/>
             </connections>
             <point key="canvasLocation" x="-37" y="-31"/>
         </tableViewCell>

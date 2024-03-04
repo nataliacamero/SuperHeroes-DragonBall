@@ -31,27 +31,12 @@ class LoginViewController: UIViewController {
                                     print("Heroes: \(heroes)")
                                     DispatchQueue.main.async {
                                         let tableView = TableViewController(heroesArray: heroes)
-                                        self?.navigationController?.setViewControllers([tableView], animated: true)//Sin boton de back, ideal para login
-                                        //self?.navigationController?.show(tableView, sender: nil)//Con boton de back
+                                        self?.navigationController?.setViewControllers([tableView], animated: true)
                                     }
-//                                    if let hero = heroes.last {
-//                                        self?.model.getTransformations(
-//                                            for: hero
-//                                        ) { result in
-//                                            switch result {
-//                                            case let .success(transformations):
-//                                                print("Transformation: \(transformations)")
-//                                            case let .failure(error):
-//                                                print("Error: \(error) como te va")
-//                                          }
-//                                        }
-//                                    }
                                 case let .failure(error):
                                     print("Error: \(error): Hola")
                                     }
                             }
-                
-              
                 case let .failure(error):
                     print("Error: \(error) Adios")
             }

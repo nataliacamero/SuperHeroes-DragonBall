@@ -129,9 +129,6 @@ final class NetworkModel {
         for hero: Hero,
         completion: @escaping (Result<[Transformation], NetworkError>) -> Void
     ) {
-        print("Entre transformations::::::::::::::::::::::")
-        print("HERo::: \(hero.id)")
-        print("Entre transformations::::::::::::::::::::::")
         var components = baseComponents
         components.path = "/api/heros/tranformations"
         
