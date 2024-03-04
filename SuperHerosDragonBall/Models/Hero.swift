@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Hero: Decodable, CommonInfo {
+struct Hero: Decodable, TableViewCellRepresentable {
     let id: String
     let name: String
     let description: String

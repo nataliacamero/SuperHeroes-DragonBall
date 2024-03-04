@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Transformation: Decodable, CommonInfo {
+struct Transformation: Decodable, TableViewCellRepresentable {
     let id: String
     let name: String
     let photo: URL

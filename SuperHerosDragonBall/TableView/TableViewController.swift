@@ -77,7 +77,7 @@ extension TableViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         let hero = heroesArray[indexPath.row ] 
-        cell.configure(with: hero as CommonInfo )
+        cell.configure(with: hero as TableViewCellRepresentable )
         return cell
     }
 }

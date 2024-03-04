@@ -30,6 +30,9 @@
 		E15D19F12ACA0A0700F5675C /* UIImage+remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19F02ACA0A0700F5675C /* UIImage+remote.swift */; };
 		E15D19FA2ACA25E300F5675C /* TransformationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19F82ACA25E300F5675C /* TransformationsListViewController.swift */; };
 		E15D19FB2ACA25E300F5675C /* TransformationsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E15D19F92ACA25E300F5675C /* TransformationsListViewController.xib */; };
+		E1DC54552B953E8100E7E37D /* TansformationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DC54532B953E8100E7E37D /* TansformationsTableViewCell.swift */; };
+		E1DC54562B953E8100E7E37D /* TansformationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1DC54542B953E8100E7E37D /* TansformationsTableViewCell.xib */; };
+		E1DC54582B95469300E7E37D /* TableViewCellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DC54572B95469300E7E37D /* TableViewCellRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +61,9 @@
 		E15D19F02ACA0A0700F5675C /* UIImage+remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+remote.swift"; sourceTree = "<group>"; };
 		E15D19F82ACA25E300F5675C /* TransformationsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransformationsListViewController.swift; sourceTree = "<group>"; };
 		E15D19F92ACA25E300F5675C /* TransformationsListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransformationsListViewController.xib; sourceTree = "<group>"; };
+		E1DC54532B953E8100E7E37D /* TansformationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TansformationsTableViewCell.swift; sourceTree = "<group>"; };
+		E1DC54542B953E8100E7E37D /* TansformationsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TansformationsTableViewCell.xib; sourceTree = "<group>"; };
+		E1DC54572B95469300E7E37D /* TableViewCellRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewCellRepresentable.swift; path = "../../../SOLUCION_PRACTICA_FUNDAMENTOS _IOS/iOS-Fundamentos-main/Practica/KCDragonBall/KCDragonBall/Models/TableViewCellRepresentable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				E15D19EF2ACA098B00F5675C /* UIImage+remote */,
+				E1DC54522B953BEA00E7E37D /* TransformationsCell */,
 				E15D19F72ACA256F00F5675C /* TransformationsTableView */,
 				E15D19EE2AC9F6C500F5675C /* HeroesTableCell */,
 				E15D19E02AC9AF5200F5675C /* Tablecell */,
@@ -120,6 +127,7 @@
 		E15D19AC2AC6166300F5675C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E1DC54572B95469300E7E37D /* TableViewCellRepresentable.swift */,
 				E15D19AD2AC6179700F5675C /* NetworkModel.swift */,
 				E15D19AF2AC631E900F5675C /* Hero.swift */,
 				E15D19B12AC729FA00F5675C /* Transformation.swift */,
@@ -182,6 +190,15 @@
 			path = TransformationsTableView;
 			sourceTree = "<group>";
 		};
+		E1DC54522B953BEA00E7E37D /* TransformationsCell */ = {
+			isa = PBXGroup;
+			children = (
+				E1DC54532B953E8100E7E37D /* TansformationsTableViewCell.swift */,
+				E1DC54542B953E8100E7E37D /* TansformationsTableViewCell.xib */,
+			);
+			path = TransformationsCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -240,6 +257,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1DC54562B953E8100E7E37D /* TansformationsTableViewCell.xib in Resources */,
 				E15D199F2AC5FD3B00F5675C /* LaunchScreen.storyboard in Resources */,
 				E15D19ED2AC9EA8300F5675C /* HeroesTableViewCell.xib in Resources */,
 				E15D19DF2AC9A09300F5675C /* TableViewCell.xib in Resources */,
@@ -263,8 +281,10 @@
 				E15D19AE2AC6179700F5675C /* NetworkModel.swift in Sources */,
 				E15D19A82AC602AD00F5675C /* LoginViewController.swift in Sources */,
 				E15D19D42AC8D33C00F5675C /* TableViewController.swift in Sources */,
+				E1DC54552B953E8100E7E37D /* TansformationsTableViewCell.swift in Sources */,
 				E15D19B42AC7361E00F5675C /* GetTransformationBody.swift in Sources */,
 				E15D19972AC5FD3B00F5675C /* ViewController.swift in Sources */,
+				E1DC54582B95469300E7E37D /* TableViewCellRepresentable.swift in Sources */,
 				E15D19B62AC860EE00F5675C /* LocalDataModel.swift in Sources */,
 				E15D19932AC5FD3B00F5675C /* AppDelegate.swift in Sources */,
 				E15D19EC2AC9EA8300F5675C /* HeroesTableViewCell.swift in Sources */,

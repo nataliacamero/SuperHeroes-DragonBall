@@ -30,7 +30,7 @@ class HeroesTableViewCell: UITableViewCell {
        }
     
     //MARK: - Metodo para configurar traer la data a la celda.
-    func configure(with heroe: CommonInfo) {
+    func configure(with heroe: TableViewCellRepresentable) {
         imageHero.setImage(for: heroe.photo)
         nameHero.text = heroe.name
         descriptionHero.text = heroe.description
