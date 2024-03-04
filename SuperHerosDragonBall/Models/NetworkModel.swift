@@ -7,23 +7,129 @@
 
 import Foundation
 
-final class NetworkModel {
-    enum NetworkError: Error {
-        case unknown
-        case malformedUrl
-        case decodingFailed
-        case encodedFailed
-        case noData
-        case statusCode(code: Int?)
-        case noToken
+enum NetworkError: Error, Equatable {
+    case unknown
+    case malformedUrl
+    case decodingFailed
+    case encodedFailed
+    case noData
+    case statusCode(code: Int?)
+    case noToken
+}
+
+extension NetworkError {
+    static func error(for code: Int) -> NetworkError? {
+        switch code {
+        case 0: return .statusCode(code: nil)
+        case 1: return .malformedUrl
+        case 2: return .noData
+        case 3: return .statusCode(code: 400)
+        case 4: return .decodingFailed
+        case 5: return .unknown
+        default: return nil
+        }
+    }
+}
+
+protocol APIClientProtocol {
+    var session: URLSession { get }
+    func request<T: Decodable>(_ request: URLRequest, using: T.Type, completion: @escaping (Result<T, NetworkError>) -> Void)
+    func jwt(_ request: URLRequest, completion: @escaping (Result<String, NetworkError>) -> Void)
+}
+
+struct APIClient: APIClientProtocol {
+    static let shared = APIClient()
+
+    let session: URLSession
+    
+    init(session: URLSession = .shared) {
+        self.session = session
     }
     
-    private var baseComponents: URLComponents {
-        var components = URLComponents()
-        components.scheme = "https"
-        components.host = "dragonball.keepcoding.education"
-        return components
+    func jwt(
+        _ request: URLRequest,
+        completion: @escaping (Result<String, NetworkError>) -> Void
+    ) {
+        let task = session.dataTask(with: request) { data, response, error in
+            let result: Result<String, NetworkError>
+            
+            defer {
+                completion(result)
+            }
+
+            guard error == nil else {
+                if let error = error as? NSError, let error = NetworkError.error(for: error.code) {
+                    result = .failure(error)
+                } else {
+                    result = .failure(.unknown)
+                }
+                return
+            }
+            
+            guard let data = data else {
+                result = .failure(.noData)
+                return
+            }
+            
+            guard (response as? HTTPURLResponse)?.statusCode == 200 else {
+                result = .failure(.statusCode(code: (response as? HTTPURLResponse)?.statusCode))
+                return
+            }
+            
+            guard let response = String(data: data, encoding: .utf8) else {
+                result = .failure(.decodingFailed)
+                return
+            }
+            result = .success(response)
+        }
+        
+        task.resume()
     }
+    
+    func request<T: Decodable>(
+        _ request: URLRequest,
+        using: T.Type,
+        completion: @escaping (Result<T, NetworkError>) -> Void
+    ) {
+        let task = session.dataTask(with: request) { data, response, error in
+            let result: Result<T, NetworkError>
+            
+            defer {
+                completion(result)
+            }
+
+            guard error == nil else {
+                if let error = error as? NSError, let error = NetworkError.error(for: error.code) {
+                    result = .failure(error)
+                } else {
+                    result = .failure(.unknown)
+                }
+                return
+            }
+            
+            guard let data = data else {
+                result = .failure(.noData)
+                return
+            }
+            
+            guard (response as? HTTPURLResponse)?.statusCode == 200 else {
+                result = .failure(.statusCode(code: (response as? HTTPURLResponse)?.statusCode))
+                return
+            }
+            
+            guard let response = try? JSONDecoder().decode(using, from: data) else {
+                result = .failure(.decodingFailed)
+                return
+            }
+            result = .success(response)
+        }
+        
+        task.resume()
+    }
+}
+
+
+final class NetworkModel {
     
     private var token: String? {
         get {
@@ -38,6 +144,21 @@ final class NetworkModel {
                 LocalDataModel.save(token: token)
             }
         }
+    }
+
+    private var baseComponents: URLComponents {
+        var components = URLComponents()
+        components.scheme = "https"
+        components.host = "dragonball.keepcoding.education"
+        return components
+    }
+    
+    private let client: APIClientProtocol
+    
+    init(
+        client: APIClientProtocol = APIClient.shared
+    ) {
+        self.client = client
     }
     
     func login(

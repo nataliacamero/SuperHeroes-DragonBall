@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E14674C52B957BCD0087CE8E /* SuperHerosDragonBallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14674C42B957BCD0087CE8E /* SuperHerosDragonBallTests.swift */; };
+		E14674CC2B9583880087CE8E /* LocalDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14674CB2B9583880087CE8E /* LocalDataTest.swift */; };
 		E15D19932AC5FD3B00F5675C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19922AC5FD3B00F5675C /* AppDelegate.swift */; };
 		E15D19952AC5FD3B00F5675C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19942AC5FD3B00F5675C /* SceneDelegate.swift */; };
 		E15D19972AC5FD3B00F5675C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19962AC5FD3B00F5675C /* ViewController.swift */; };
@@ -33,7 +35,20 @@
 		E1DC54582B95469300E7E37D /* TableViewCellRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DC54572B95469300E7E37D /* TableViewCellRepresentable.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E14674C62B957BCD0087CE8E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E15D19872AC5FD3B00F5675C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E15D198E2AC5FD3B00F5675C;
+			remoteInfo = SuperHerosDragonBall;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		E14674C22B957BCD0087CE8E /* SuperHerosDragonBallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperHerosDragonBallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E14674C42B957BCD0087CE8E /* SuperHerosDragonBallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHerosDragonBallTests.swift; sourceTree = "<group>"; };
+		E14674CB2B9583880087CE8E /* LocalDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataTest.swift; sourceTree = "<group>"; };
 		E15D198F2AC5FD3B00F5675C /* SuperHerosDragonBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperHerosDragonBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15D19922AC5FD3B00F5675C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E15D19942AC5FD3B00F5675C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +78,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E14674BF2B957BCD0087CE8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E15D198C2AC5FD3B00F5675C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -73,10 +95,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E14674C32B957BCD0087CE8E /* SuperHerosDragonBallTests */ = {
+			isa = PBXGroup;
+			children = (
+				E14674C42B957BCD0087CE8E /* SuperHerosDragonBallTests.swift */,
+				E14674CB2B9583880087CE8E /* LocalDataTest.swift */,
+			);
+			path = SuperHerosDragonBallTests;
+			sourceTree = "<group>";
+		};
 		E15D19862AC5FD3B00F5675C = {
 			isa = PBXGroup;
 			children = (
 				E15D19912AC5FD3B00F5675C /* SuperHerosDragonBall */,
+				E14674C32B957BCD0087CE8E /* SuperHerosDragonBallTests */,
 				E15D19902AC5FD3B00F5675C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				E15D198F2AC5FD3B00F5675C /* SuperHerosDragonBall.app */,
+				E14674C22B957BCD0087CE8E /* SuperHerosDragonBallTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -188,6 +221,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E14674C12B957BCD0087CE8E /* SuperHerosDragonBallTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E14674C82B957BCD0087CE8E /* Build configuration list for PBXNativeTarget "SuperHerosDragonBallTests" */;
+			buildPhases = (
+				E14674BE2B957BCD0087CE8E /* Sources */,
+				E14674BF2B957BCD0087CE8E /* Frameworks */,
+				E14674C02B957BCD0087CE8E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E14674C72B957BCD0087CE8E /* PBXTargetDependency */,
+			);
+			name = SuperHerosDragonBallTests;
+			productName = SuperHerosDragonBallTests;
+			productReference = E14674C22B957BCD0087CE8E /* SuperHerosDragonBallTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E15D198E2AC5FD3B00F5675C /* SuperHerosDragonBall */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E15D19A32AC5FD3B00F5675C /* Build configuration list for PBXNativeTarget "SuperHerosDragonBall" */;
@@ -212,9 +263,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					E14674C12B957BCD0087CE8E = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = E15D198E2AC5FD3B00F5675C;
+					};
 					E15D198E2AC5FD3B00F5675C = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
@@ -234,11 +289,19 @@
 			projectRoot = "";
 			targets = (
 				E15D198E2AC5FD3B00F5675C /* SuperHerosDragonBall */,
+				E14674C12B957BCD0087CE8E /* SuperHerosDragonBallTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E14674C02B957BCD0087CE8E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E15D198D2AC5FD3B00F5675C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -257,6 +320,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E14674BE2B957BCD0087CE8E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E14674C52B957BCD0087CE8E /* SuperHerosDragonBallTests.swift in Sources */,
+				E14674CC2B9583880087CE8E /* LocalDataTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E15D198B2AC5FD3B00F5675C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -282,6 +354,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		E14674C72B957BCD0087CE8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E15D198E2AC5FD3B00F5675C /* SuperHerosDragonBall */;
+			targetProxy = E14674C62B957BCD0087CE8E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		E15D199D2AC5FD3B00F5675C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -294,6 +374,51 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E14674C92B957BCD0087CE8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keepcoding.SuperHerosDragonBallTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SuperHerosDragonBall.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SuperHerosDragonBall";
+			};
+			name = Debug;
+		};
+		E14674CA2B957BCD0087CE8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.keepcoding.SuperHerosDragonBallTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SuperHerosDragonBall.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SuperHerosDragonBall";
+			};
+			name = Release;
+		};
 		E15D19A12AC5FD3B00F5675C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -465,6 +590,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E14674C82B957BCD0087CE8E /* Build configuration list for PBXNativeTarget "SuperHerosDragonBallTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E14674C92B957BCD0087CE8E /* Debug */,
+				E14674CA2B957BCD0087CE8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E15D198A2AC5FD3B00F5675C /* Build configuration list for PBXProject "SuperHerosDragonBall" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
