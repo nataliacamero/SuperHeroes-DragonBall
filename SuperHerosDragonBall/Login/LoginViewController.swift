@@ -28,24 +28,17 @@ class LoginViewController: UIViewController {
                     self?.model.getHeroes { result in
                             switch result {
                                 case let .success(heroes):
-                                    print("Heroes: \(heroes)")
                                     DispatchQueue.main.async {
                                         let tableView = TableViewController(heroesArray: heroes)
                                         self?.navigationController?.setViewControllers([tableView], animated: true)
                                     }
                                 case let .failure(error):
-                                    print("Error: \(error): Hola")
+                                    print("Error: \(error)")
                                     }
                             }
                 case let .failure(error):
-                    print("Error: \(error) Adios")
+                    print("Error: \(error)")
             }
-            
         }
-        
-        		
-        
     }
-
-
 }

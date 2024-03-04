@@ -27,8 +27,7 @@ class TableViewController: UIViewController {
         title = "Heroes"
         tableView.dataSource = self
         tableView.delegate = self
-        print("Heroes en TableView: \(heroesArray)")
-//        ) //Registar nuesta celda
+        //Registar nuesta celda
         tableView.register(
             UINib(nibName: "HeroesTableViewCell", bundle: nil),
             forCellReuseIdentifier: HeroesTableViewCell.identifier

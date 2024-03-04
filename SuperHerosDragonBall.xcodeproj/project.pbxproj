@@ -23,8 +23,6 @@
 		E15D19D52AC8D33C00F5675C /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E15D19D32AC8D33C00F5675C /* TableViewController.xib */; };
 		E15D19D92AC9780600F5675C /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19D72AC9780600F5675C /* DataViewController.swift */; };
 		E15D19DA2AC9780600F5675C /* DataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E15D19D82AC9780600F5675C /* DataViewController.xib */; };
-		E15D19DE2AC9A09300F5675C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19DC2AC9A09300F5675C /* TableViewCell.swift */; };
-		E15D19DF2AC9A09300F5675C /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E15D19DD2AC9A09300F5675C /* TableViewCell.xib */; };
 		E15D19EC2AC9EA8300F5675C /* HeroesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19EA2AC9EA8300F5675C /* HeroesTableViewCell.swift */; };
 		E15D19ED2AC9EA8300F5675C /* HeroesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E15D19EB2AC9EA8300F5675C /* HeroesTableViewCell.xib */; };
 		E15D19F12ACA0A0700F5675C /* UIImage+remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15D19F02ACA0A0700F5675C /* UIImage+remote.swift */; };
@@ -54,8 +52,6 @@
 		E15D19D32AC8D33C00F5675C /* TableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
 		E15D19D72AC9780600F5675C /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		E15D19D82AC9780600F5675C /* DataViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataViewController.xib; sourceTree = "<group>"; };
-		E15D19DC2AC9A09300F5675C /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		E15D19DD2AC9A09300F5675C /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		E15D19EA2AC9EA8300F5675C /* HeroesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesTableViewCell.swift; sourceTree = "<group>"; };
 		E15D19EB2AC9EA8300F5675C /* HeroesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroesTableViewCell.xib; sourceTree = "<group>"; };
 		E15D19F02ACA0A0700F5675C /* UIImage+remote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+remote.swift"; sourceTree = "<group>"; };
@@ -100,7 +96,6 @@
 				E1DC54522B953BEA00E7E37D /* TransformationsCell */,
 				E15D19F72ACA256F00F5675C /* TransformationsTableView */,
 				E15D19EE2AC9F6C500F5675C /* HeroesTableCell */,
-				E15D19E02AC9AF5200F5675C /* Tablecell */,
 				E15D19DB2AC984E300F5675C /* DetailView */,
 				E15D19D62AC8D4F200F5675C /* TableView */,
 				E15D19AA2AC6032800F5675C /* Login */,
@@ -153,15 +148,6 @@
 				E15D19D82AC9780600F5675C /* DataViewController.xib */,
 			);
 			path = DetailView;
-			sourceTree = "<group>";
-		};
-		E15D19E02AC9AF5200F5675C /* Tablecell */ = {
-			isa = PBXGroup;
-			children = (
-				E15D19DC2AC9A09300F5675C /* TableViewCell.swift */,
-				E15D19DD2AC9A09300F5675C /* TableViewCell.xib */,
-			);
-			path = Tablecell;
 			sourceTree = "<group>";
 		};
 		E15D19EE2AC9F6C500F5675C /* HeroesTableCell */ = {
@@ -260,7 +246,6 @@
 				E1DC54562B953E8100E7E37D /* TansformationsTableViewCell.xib in Resources */,
 				E15D199F2AC5FD3B00F5675C /* LaunchScreen.storyboard in Resources */,
 				E15D19ED2AC9EA8300F5675C /* HeroesTableViewCell.xib in Resources */,
-				E15D19DF2AC9A09300F5675C /* TableViewCell.xib in Resources */,
 				E15D19FB2ACA25E300F5675C /* TransformationsListViewController.xib in Resources */,
 				E15D19DA2AC9780600F5675C /* DataViewController.xib in Resources */,
 				E15D19BF2AC89FEC00F5675C /* Assets.xcassets in Resources */,
@@ -289,7 +274,6 @@
 				E15D19932AC5FD3B00F5675C /* AppDelegate.swift in Sources */,
 				E15D19EC2AC9EA8300F5675C /* HeroesTableViewCell.swift in Sources */,
 				E15D19952AC5FD3B00F5675C /* SceneDelegate.swift in Sources */,
-				E15D19DE2AC9A09300F5675C /* TableViewCell.swift in Sources */,
 				E15D19B02AC631E900F5675C /* Hero.swift in Sources */,
 				E15D19D92AC9780600F5675C /* DataViewController.swift in Sources */,
 				E15D19F12ACA0A0700F5675C /* UIImage+remote.swift in Sources */,
