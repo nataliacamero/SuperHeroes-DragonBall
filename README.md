@@ -5,7 +5,7 @@ Este proyecto implementa una aplicación iOS que muestra información sobre hér
 ## Tecnologías Utilizadas
 
 - **UIKit**: Utilizada para crear la interfaz de usuario de la aplicación.
-- **Xcode**: IDE utilizado para el desarrollo de la aplicación, diseño dla interfaz  usuario meante archivos XIB.
+- **Xcode**: IDE utilizado para el desarrollo de la aplicación, diseño de la interfaz del usuario mediante **archivos XIB**.
 - **Conexión con API externa**: La aplicación se conecta a una API externa para obtener datos sobre los héroes y sus transformaciones.
 - **MVC (Modelo-Vista-Controlador)**: Patrón de diseño utilizado para organizar y estructurar el código de la aplicación.
 
