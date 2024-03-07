@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+protocol TableViewCellRepresentable {
+    var photo: URL { get }
+    var name: String { get }
+    var description: String { get }
+}
